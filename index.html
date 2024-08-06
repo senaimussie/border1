@@ -3,74 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Border Style and Text Formatting Example</title>
+    <title>Combined Example</title>
+    <link href="fontawesome-free-6.6.0-web/css/fontawesome.css" rel="stylesheet" />
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Hover effect example */
+        .link {
+            display: inline-block;
+            padding: 10px;
+            color: white;
+            background-color: green;
+            text-decoration: none;
+        }
+        .link:hover {
+            color: green;
+            background-color: white;
+            border: 2px solid green;
         }
 
-        .dotted-border {
-            border-left: 3px dotted red;
-            border-bottom: 3px dotted ;
-            border-top: 3px dotted ;
-            border-right: 3px dotted red;
-            margin: 10px 0;
-            padding: 5px;
-        }
-
-        .rounded-corners {
-            border: 2px solid black;
-            border-radius: 25px;
-            padding: 20px;
-            width: 200px;
-            height: 150px;
-            margin-bottom: 20px;
-        }
-
-        .yellow-background {
+        .highlighted-list {
             background-color: yellow;
         }
 
-        .text-box {
-            border: 1px solid black;
-            margin-top: 20px;
+        /* Z-index example */
+        .background-image {
+            position: absolute;
+            z-index: -1;
+            width: 100px;
+            height: 100px;
+        }
+        .heading {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Display property example */
+        .inline-box {
+            display: inline;
+            background-color: yellow;
+            padding: 5px;
+            border: 1px solid blue;
+        }
+        .inline-block-box {
+            display: inline-block;
+            background-color: yellow;
             padding: 20px;
+            border: 1px solid blue;
+            margin: 5px;
         }
-
-        .text-box h2 {
-            color: green;
-            text-align: center;
-        }
-
-        .text-box p {
-            text-align: center;
-            font-style: italic;
-        }
-
-        .text-box a {
-            color: blue;
+        .block-box {
+            display: block;
+            background-color: yellow;
+            padding: 20px;
+            border: 1px solid blue;
+            margin: 5px;
         }
     </style>
 </head>
 <body>
-    <h1>The border-style Property</h1>
-    <p class="dotted-border">A border</p>
+    <!-- Hover effect example -->
     
-    <div class="rounded-corners">
-        Rounded corners!
-    </div>
-    
-    <div class="rounded-corners yellow-background">
-        Rounded corners!
-    </div>
+    <a href="#" class="link">This is a link</a>
+    <br><br>
 
-    <div class="text-box">
-        <h2>TEXT FORMATTING</h2>
-        <p>This text is styled <a href="bd.html">"Try it"</a> link.</p>
-    </div>
-    <div class="img">
-        
-    </div>
+    <!-- List styling example -->
+    <ul class="highlighted-list">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul>
+    <br>
+    <br>
+    
+    <!-- Image behind heading using z-index -->
+    <img src="screen.png" alt="Background Image" class="background-image" >
+    <h1 class="heading">This is a heading</h1>
+    <p class="heading">Because the image has a z-index of -1, it will be placed behind the text.</p>
+
+    <!-- Display property example -->
+    <h2>The display Property</h2>
+    <h3>display: inline</h3>
+    <span class="inline-box">hello</span>
+    <span class="inline-box">there</span>
+    <p>this is text this is text this is text this is text this is text</p>
+
+    <h3>display: inline-block</h3>
+    <div class="inline-block-box">hello</div>
+    <div class="inline-block-box">there</div>
+    <p>this is text this is text this is text this is text this is text</p>
+
+    <h3>display: block</h3>
+    <div class="block-box">hello</div>
+    <div class="block-box">there</div>
+    <p>this is text this is text this is text this is text this is text</p>
 </body>
 </html>
-
